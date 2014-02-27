@@ -1,21 +1,51 @@
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>TimeCondenser - VLFormPic</title>
+<title>DailyDropdown</title>
+<link rel="stylesheet" href="http://icefishing.dyndns.org:8080/public/stylesheets/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 </head>
 <body>
-<form method=GET action=""> <table nowrap> <tr><td>Day</TD><TD><input type="text" name="day" size=12 value=2014-02-10 ></td> <td>Time</td><td><input type="text" name="time" size=12 value=950></td>
-<td><input type="submit" value="Show Picture"></td> </tr></table></form>
-After choosing date range, go 
-<a href="http://nick-finally/timecondenser/seriespicker?startdate=2014-02-10&starttime=950&enddate=2014-02-11&endtime=950" target="picker">here</a>
- to interpolate and combine.<br>
-<a href="http://nick-finally/timecondenser/vlformpic?day=2014-02-09&time=950"> Prev Day</a>
-<a href="http://nick-finally/timecondenser/vlformpic?day=2014-02-10&time=950"> Now Day</a>
-<a href="http://nick-finally/timecondenser/vlformpic?day=2014-02-11&time=950"> Next Day</a>
-<br>                                                                        
-<a href="http://nick-finally/timecondenser/vlformpic?day=2014-02-10&time=949"> Prev Img</a>
-<a href="http://nick-finally/timecondenser/vlformpic?day=2014-02-10&time=950"> Now Img</a>
-<a href="http://nick-finally/timecondenser/vlformpic?day=2014-02-10&time=951"> Next Img</a>
-<br><img src=../img/raspi_downloads/2014-02-10/img000950.jpg></img>
+<!--h1= title-->
+<!-- Wrapper-->
+<div id="wrapper">
+<!-- DAILY DROPDOWN FIRST-->
+<h2>DailyDropdown</h2>
+<fieldset>
+<div id="addEntry">
+<div class="myinput">
+<input id="inputNouns" autocomplete="on" placeholder="I">
+<select id="selectInputNouns">
+</select>
+</div>
+<div class="myinput">     <input id="inputVerbs" placeholder="ate">
+<select id="selectInputVerbs">
+</select>
+</div>
+<div class="myinput">
+<input id="inputAdjectives" placeholder="waffles">
+<select id="selectInputAdjectives">
+</select>
+</div>
+<button id="btnAddEntry">Add Entry</button>
+<button id="btnSearchEntry">Search Entries</button>
+</div>
+</fieldset>
+<!-- /dailydropdown-->
+<!-- USER LIST-->
+<a href="#" id="linkpopulatetable" class="myclass">Pull entry list from server</a>
+<a href="#" id="linkclearentries" class="myclass">Clear Local Entries</a>
+<br>
+<a href="#" id="linksyncentries" class="myclass">Push new entries to server</a>
+<a href="#" id="linkupdatelocal" class="myclass">Update table with Local Entries</a>
+<div id="userList">
+</div>
+</div>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'>
+</script>
+<script src='http://icefishing.dyndns.org:8080/javascripts/global.js'>
+</script>
+<!--<script src='/javascripts/jquery.editable.select.js'>
+</script>-->
 </body>
 </html>
