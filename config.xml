@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "org.dyndns.icefishing"
+        versionCode = "1"
+        version     = "0.0.1" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>PhoneGap Dropdown</name>
+
+    <description>
+        An example for phonegap build docs. Dropdown!
+    </description>
+
+    <author href="http://icefishing.dyndns.org" email="otispdawson@gmail.com">
+        Otis P. Dawson
+    </author>
+
+
+    <preference name="permissions"                value="none"/>
+
+    <!-- Define app icon for each platform. -->
+    <icon src="images/firsticon.png" />
+    <icon src="images/firsticon_red_36px.png"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="images/firsticon_red_48px.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="images/firsticon_red_72px.png"   gap:platform="android"    gap:density="hdpi" />
+    <icon src="images/firsticon_red_96px.png"  gap:platform="android"    gap:density="xhdpi" />
+
+    <!-- Define app splash screen for each platform. -->
+    <gap:splash src="images/firsticon_red_96px" gap:platform="android" gap:density="xhdpi" />
+
+
+    <access origin="http://icefishing.dyndns.org:8080" />
+</widget>
