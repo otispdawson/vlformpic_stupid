@@ -19,10 +19,9 @@
     
     <gap:platform name="android" />
 
-    <preference name="permissions"                value="none"/>
 
     <!-- Define app icon for each platform. -->
-    <icon src="images/firsticon.png" />
+    <icon src="icon.png" />
     <icon src="images/firsticon_red_36px.png"   gap:platform="android"    gap:density="ldpi" />
     <icon src="images/firsticon_red_48px.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="images/firsticon_red_72px.png"   gap:platform="android"    gap:density="hdpi" />
