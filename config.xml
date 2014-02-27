@@ -16,7 +16,8 @@
     <author href="http://icefishing.dyndns.org" email="otispdawson@gmail.com">
         Otis P. Dawson
     </author>
-
+    
+    <gap:platform name="android" />
 
     <preference name="permissions"                value="none"/>
 
