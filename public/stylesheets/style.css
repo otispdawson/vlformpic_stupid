@@ -1,0 +1,80 @@
+body{
+background: #FDFDC2;
+max-width:900px;
+margin-right:auto;
+margin-left:auto;
+font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+border: 1px solid #00B7FF;
+}
+a {
+  color: #0000FF;
+}
+/*input goes on left with select right next to it*/
+/*Remove margin between them so they are touching*/
+/*Input expands to fill 100% of the fieldset     */
+input {
+margin-right:0px;
+width:100%;
+/*max-width:740px;
+width: calc(100% - 30px);*/
+}
+#addEntry select {
+max-width: 20px;
+margin-left: 0px;
+}
+/*make a div around 1 input and 1 select, axpand to fit fieldset*/
+/*but force the select to be on the same line as the input*/
+.myinput{
+width:100%;
+white-space:nowrap;
+}
+/*here's the magic though! The fieldset's padding */
+/*on the right brings it in 30px towards the left*/
+/*So the input fills (100%-30px) of the fieldset*
+/*and the select fits in the 30px with 10px left over*/
+/*HACK gets around the lack of input width:calc(100%-30px) */
+/*support on android */
+fieldset{
+padding-right: 35px ;
+padding-left: 5px;
+border: 0px solid #00B7FF;
+margin-left: 0px;
+margin-right: 0px;
+}
+/*float these on the right side, takes less vert space*/
+#linkclearentries, #linkupdatelocal, #statusSpan{
+float:right;
+}
+/*horiz lines top margin 20px gives enough room for the */
+/*date+delete link to fit, otherwise the hline hits them*
+/*right in the vertical middle of text*/
+hr{
+margin: 20px 0px 0px 0px;
+border:0px;
+height:1px;
+background-color: #00B7FF;
+}
+h2 {
+text-align:center;
+}
+/*bring the text entries in 4px from right an left edge */
+/*wrapper is a div that covers my content body*/
+#wrapper span{
+padding: 0px 4px 0px 4px;
+}
+#userList{
+border: 0px solid  #00B7FF;
+}
+/*if the screen is small or we are in portrait mode*/
+@media (max-width: 800px) , (orientation:portrait){
+    /*wrap words aggressively*/
+    #userList{
+    word-wrap:break-word;
+    }
+    /*hide the 'delete' link*/
+    .linkdeleteentry{
+        display: none;
+    }
+}
+
+
