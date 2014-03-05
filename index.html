@@ -29,6 +29,7 @@
 </div>
 <button id="btnAddEntry">Add Entry</button>
 <button id="btnSearchEntry">Search Entries</button>
+<span id="statusSpan"></span>
 </div>
 </fieldset>
 <!-- /dailydropdown-->
@@ -45,7 +46,20 @@
 </script>
 <script src='http://icefishing.dyndns.org:8080/javascripts/global.js'>
 </script>
-<!--<script src='/javascripts/jquery.editable.select.js'>
-</script>-->
+<script>
+//Check for remotely loaded files, if not found, switch to local files. 
+if (typeof jQuery ==='undefined'){
+	console.log("jquery not found, loading local");
+	document.write('<script src="public/javascripts/jquery.min.js">\x3C/script>');
+}else{
+	console.log("jquery found.");
+}
+if (typeof userListData ==='undefined'){
+	document.getElementById("statusSpan").innerHTML="Couldn't load from server, Running locally";
+	document.write('<link rel="stylesheet" href="public/stylesheets/style.css">');
+	document.write('<script src="public/javascripts/global.js">\x3C/script>');
+}
+
+</script>
 </body>
 </html>
